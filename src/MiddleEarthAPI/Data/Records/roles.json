@@ -1,0 +1,10 @@
+[
+  {
+    "roleId": 1,
+    "authorRole": "Writer"
+  },
+  {
+    "roleId": 2,
+    "authorRole": "Editor"
+  }
+]

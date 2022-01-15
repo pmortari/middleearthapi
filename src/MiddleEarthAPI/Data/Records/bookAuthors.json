@@ -1,0 +1,14 @@
+[
+  {
+    "bookAuthorId": 1,
+    "authorId": 1,
+    "roleId": 1,
+    "bookId": 1
+  },
+  {
+    "bookAuthorId": 2,
+    "authorId": 2,
+    "roleId": 2,
+    "bookId": 1
+  }
+]

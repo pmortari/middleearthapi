@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32104.313
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiddleEarthAPI", "src\MiddleEarthAPI\MiddleEarthAPI.csproj", "{CD40A250-7096-4020-A945-9B2FAF955D0C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiddleEarthAPI.UnitTest", "src\MiddleEarthAPI.UnitTest\MiddleEarthAPI.UnitTest.csproj", "{B2F29B19-C66D-4C14-B770-3223B78931FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD40A250-7096-4020-A945-9B2FAF955D0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD40A250-7096-4020-A945-9B2FAF955D0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD40A250-7096-4020-A945-9B2FAF955D0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD40A250-7096-4020-A945-9B2FAF955D0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2F29B19-C66D-4C14-B770-3223B78931FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2F29B19-C66D-4C14-B770-3223B78931FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2F29B19-C66D-4C14-B770-3223B78931FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2F29B19-C66D-4C14-B770-3223B78931FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {058A7FA2-01F7-41D5-841E-67430E124F0A}
+	EndGlobalSection
+EndGlobal

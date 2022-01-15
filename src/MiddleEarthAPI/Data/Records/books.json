@@ -1,0 +1,15 @@
+[
+  {
+    "bookId": 1,
+    "name": "The Silmarillion",
+    "originalReleaseDate": "1977-09-15",
+    "pages": 365,
+    "publisherId": 1    
+  },
+  {
+    "bookId": 2,
+    "name": "Test",
+    "originalReleaseDate": "2021-01-12",
+    "pages": 350
+  }
+]
