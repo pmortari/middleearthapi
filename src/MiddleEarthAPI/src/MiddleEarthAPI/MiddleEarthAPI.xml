@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MiddleEarthAPI</name>
+    </assembly>
+    <members>
+        <member name="M:MiddleEarthAPI.Controllers.BookController.GetBooks">
+            <summary>
+            Returns a list of the amazing books from the Middle Earth
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiddleEarthAPI.Controllers.BookController.GetBookById(System.Int32)">
+            <summary>
+            Returns a detailed version of a book by its id
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
