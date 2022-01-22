@@ -11,7 +11,7 @@ namespace MiddleEarthAPI.Controllers
     [Produces("application/json")]
     public class BookController : ControllerBase
     {
-        private const string _componentName = "[BookControler]";
+        private const string ComponentName = "[BookControler]";
         private readonly IBookService _bookService;
         private readonly ILogger _logger;
 
@@ -28,14 +28,13 @@ namespace MiddleEarthAPI.Controllers
         /// <returns></returns>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> GetBooks()
         {
-            _logger.LogInformation($"{_componentName} - Retrieving books through GetBooks");
+            _logger.LogInformation($"{ComponentName} - Retrieving books through GetBooks");
 
             var books = await _bookService.GetBooks();
 
-            _logger.LogInformation($"{_componentName} - Retrieved {books.Count} books through GetBooks");
+            _logger.LogInformation($"{ComponentName} - Retrieved {books.Count} books through GetBooks");
 
             return Ok(books);
         }
@@ -46,11 +45,10 @@ namespace MiddleEarthAPI.Controllers
         /// <returns></returns>
         [HttpGet("{id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetBookById(int id)
         {
-            _logger.LogInformation($"{_componentName} - Retrieving book through GetBookById with the following id: {id}");
+            _logger.LogInformation($"{ComponentName} - Retrieving book through GetBookById with the following id: {id}");
 
             var book = await _bookService.GetBookById(id);
 
@@ -59,7 +57,7 @@ namespace MiddleEarthAPI.Controllers
                 return NotFound();
             }
 
-            _logger.LogInformation($"{_componentName} - Retrieved book with id {id} through GetBookById");
+            _logger.LogInformation($"{ComponentName} - Retrieved book with id {id} through GetBookById");
 
             return Ok(book);
         }
