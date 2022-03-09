@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MiddleEarthAPI.Services.Interfaces;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace MiddleEarthAPI.Controllers
@@ -22,8 +23,12 @@ namespace MiddleEarthAPI.Controllers
             _authorService = authorService;
         }
 
+        /// <summary>
+        /// Returns a list of the authors responsible for the Middle Earth books
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType((typeof(ICollection<Resources.DataTransferObjects.Response.Author>)), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetAuthors()
         {
             _logger.LogInformation($"{ComponentName} - Retrieving authors through GetAuthors");

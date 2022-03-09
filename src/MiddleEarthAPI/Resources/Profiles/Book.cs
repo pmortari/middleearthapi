@@ -6,11 +6,7 @@ namespace MiddleEarthAPI.Resources.Profiles
     {
         public Book()
         {
-            CreateMap<Data.Models.Book, DataTransferObjects.Response.Book>()
-                .ForMember(destination => destination.Publisher,
-                    map => map.MapFrom(
-                        (source, destination) => source?.Publisher?.Name));
-            CreateMap<Data.Models.BookAuthor, DataTransferObjects.Response.BookWriter>();
+            CreateMap<Data.Models.Book, DataTransferObjects.Response.Book>();
         }
     }
 }

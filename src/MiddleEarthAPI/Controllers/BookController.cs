@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MiddleEarthAPI.Services.Interfaces;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace MiddleEarthAPI.Controllers
@@ -23,11 +24,11 @@ namespace MiddleEarthAPI.Controllers
         }
 
         /// <summary>
-        /// Returns a list of the amazing books from the Middle Earth
+        /// Returns a list of the books from the Middle Earth
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType((typeof(ICollection<Resources.DataTransferObjects.Response.Book>)), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetBooks()
         {
             _logger.LogInformation($"{ComponentName} - Retrieving books through GetBooks");
@@ -44,7 +45,7 @@ namespace MiddleEarthAPI.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet("{id:int}")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType((typeof(Resources.DataTransferObjects.Response.DetailedBook)), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetBookById(int id)
         {

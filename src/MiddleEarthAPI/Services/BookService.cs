@@ -24,7 +24,7 @@ namespace MiddleEarthAPI.Services
             _mapper = mapper;
         }
 
-        public async Task<Book> GetBookById(int id)
+        public async Task<DetailedBook> GetBookById(int id)
         {
             _logger.LogInformation($"{ComponentName} - Retrieving book through GetBookById with the following id: {id}.");
 
@@ -38,7 +38,7 @@ namespace MiddleEarthAPI.Services
 
             _logger.LogInformation($"{ComponentName} - Preparing to map Book Id: {id}.");
 
-            var mappedBook = _mapper.Map<Book>(book);
+            var mappedBook = _mapper.Map<DetailedBook>(book);
 
             _logger.LogInformation($"{ComponentName} - Book Id: {id} successfully mapped.");
 

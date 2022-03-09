@@ -7,6 +7,6 @@ namespace MiddleEarthAPI.Services.Interfaces
     {
         Task<ICollection<Resources.DataTransferObjects.Response.Book>> GetBooks();
 
-        Task<Resources.DataTransferObjects.Response.Book> GetBookById(int id);
+        Task<Resources.DataTransferObjects.Response.DetailedBook> GetBookById(int id);
     }
 }

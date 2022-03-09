@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace MiddleEarthAPI.Resources.DataTransferObjects.Response
 {
-    public class Book
+    public class DetailedBook
     {
         public int BookId { get; set; }
 
@@ -11,5 +12,9 @@ namespace MiddleEarthAPI.Resources.DataTransferObjects.Response
         public DateTime OriginalReleaseDate { get; set; }
 
         public int Pages { get; set; }
+
+        public string Publisher { get; set; }
+
+        public IList<BookWriter> Authors { get; set; }
     }
 }

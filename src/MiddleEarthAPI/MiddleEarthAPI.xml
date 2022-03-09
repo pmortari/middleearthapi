@@ -4,9 +4,15 @@
         <name>MiddleEarthAPI</name>
     </assembly>
     <members>
+        <member name="M:MiddleEarthAPI.Controllers.AuthorController.GetAuthors">
+            <summary>
+            Returns a list of the authors responsible for the Middle Earth books
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:MiddleEarthAPI.Controllers.BookController.GetBooks">
             <summary>
-            Returns a list of the amazing books from the Middle Earth
+            Returns a list of the books from the Middle Earth
             </summary>
             <returns></returns>
         </member>
@@ -14,6 +20,19 @@
             <summary>
             Returns a detailed version of a book by its id
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiddleEarthAPI.Controllers.PublisherController.GetPublishers">
+            <summary>
+            Returns a list of the publishers of the books from the Middle Earth
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiddleEarthAPI.Controllers.PublisherController.GetPublisherById(System.Int32)">
+            <summary>
+            Returns information regarding a publisher by its id
+            </summary>
+            <param name="id"></param>
             <returns></returns>
         </member>
     </members>
