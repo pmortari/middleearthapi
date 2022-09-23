@@ -7,6 +7,6 @@ namespace MiddleEarthAPI.Services.Interfaces
     {
         Task<ICollection<Resources.DataTransferObjects.Response.Author>> GetAuthors();
 
-        Task<Resources.DataTransferObjects.Response.Author> GetAuthorById(int id);
+        Task<Resources.DataTransferObjects.Response.DetailedAuthor> GetAuthorById(int id);
     }
 }

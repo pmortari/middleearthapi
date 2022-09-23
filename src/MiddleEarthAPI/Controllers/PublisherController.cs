@@ -64,6 +64,7 @@ namespace MiddleEarthAPI.Controllers
         }
     }
 
+    //TODO: Temporary and it will be replaced by its own file in the future
     public interface IPublisherService
     {
         Task<object> GetPublisherById(int id);

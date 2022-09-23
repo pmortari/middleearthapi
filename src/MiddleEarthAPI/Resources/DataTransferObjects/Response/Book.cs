@@ -2,7 +2,7 @@
 
 namespace MiddleEarthAPI.Resources.DataTransferObjects.Response
 {
-    public class Book
+    public record Book
     {
         public int BookId { get; set; }
 

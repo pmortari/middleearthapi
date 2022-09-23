@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MiddleEarthAPI.Resources.DataTransferObjects.Response
 {
-    public class DetailedBook
+    public record DetailedBook
     {
         public int BookId { get; set; }
 

@@ -10,6 +10,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:MiddleEarthAPI.Controllers.AuthorController.GetAuthorById(System.Int32)">
+            <summary>
+            Returns a detailed version of an author by its id
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:MiddleEarthAPI.Controllers.BookController.GetBooks">
             <summary>
             Returns a list of the books from the Middle Earth

@@ -1,6 +1,6 @@
 ﻿namespace MiddleEarthAPI.Resources.DataTransferObjects.Response
 {
-    public class BookWriter
+    public record BookWriter
     {
         public string Name { get; set; }
 

@@ -39,7 +39,7 @@ namespace MiddleEarthAPI.Data.Repositories
             var serializedData = JsonSerializer.Deserialize<List<T>>(data,
                                                                      new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
-            //TODO: Phillip - Review this portion of code in the future - Testing purposes
+            //TODO: Review this portion of code in the future - Testing purposes
             serializedData.ForEach(p => _middleEarthDataContext.Entry(p).State = Microsoft.EntityFrameworkCore.EntityState.Added);
         }
 

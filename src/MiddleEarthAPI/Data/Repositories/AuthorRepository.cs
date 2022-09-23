@@ -20,9 +20,16 @@ namespace MiddleEarthAPI.Data.Repositories
             _middleEarthDataContext = middleEarthDataContext;
         }
 
-        public Task<Author> GetAuthorById(int id)
+        public async Task<Author> GetAuthorById(int id)
         {
-            throw new System.NotImplementedException();
+            _logger.LogInformation($"{ComponentName} - Retrieving author through GetAuthorById with the following id: {id}.");
+
+            var author = await _middleEarthDataContext.Author
+                .FirstOrDefaultAsync(p => p.AuthorId == id);
+
+            _logger.LogInformation($"{ComponentName} - Retrieved author through GetAuthorById with the following id: {id}.");
+
+            return author;
         }
 
         public async Task<ICollection<Author>> GetAuthors()

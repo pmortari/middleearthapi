@@ -24,9 +24,25 @@ namespace MiddleEarthAPI.Services
             _mapper = mapper;
         }
 
-        public Task<Author> GetAuthorById(int id)
+        public async Task<DetailedAuthor> GetAuthorById(int id)
         {
-            throw new System.NotImplementedException();
+            _logger.LogInformation($"{ComponentName} - Retrieving author through GetAuthorById with the following id: {id}.");
+
+            var author = await _authorRepository.GetAuthorById(id);
+
+            if (author == null)
+            {
+                _logger.LogInformation($"{ComponentName} - No author found with id {id} through GetAuthorById.");
+                return null;
+            }
+
+            _logger.LogInformation($"{ComponentName} - Preparing to map Author Id: {id}.");
+
+            var mappedAuthor = _mapper.Map<DetailedAuthor>(author);
+
+            _logger.LogInformation($"{ComponentName} - Author Id: {id} successfully mapped.");
+
+            return mappedAuthor;
         }
 
         public async Task<ICollection<Author>> GetAuthors()
