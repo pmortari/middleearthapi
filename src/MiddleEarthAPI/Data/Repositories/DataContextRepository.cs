@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Options;
+using MiddleEarthAPI.Data.Models;
 using MiddleEarthAPI.Data.Repositories.Interfaces;
 using MiddleEarthAPI.Resources;
 using System.Collections.Generic;
@@ -21,11 +22,11 @@ namespace MiddleEarthAPI.Data.Repositories
 
         public void LoadInMemoryData()
         {
-            LoadData<Models.Publisher>(_settings.PublishersFile);
-            LoadData<Models.Role>(_settings.RolesFile);
-            LoadData<Models.Author>(_settings.AuthorsFile);
-            LoadData<Models.Book>(_settings.BooksFile);
-            LoadData<Models.BookAuthor>(_settings.BookAuthorsFile);
+            LoadData<Publisher>(_settings.PublishersFile);
+            LoadData<Role>(_settings.RolesFile);
+            LoadData<Author>(_settings.AuthorsFile);
+            LoadData<Book>(_settings.BooksFile);
+            LoadData<BookAuthor>(_settings.BookAuthorsFile);
 
             SaveInMemoryEntities();
         }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using MiddleEarthAPI.Services.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -62,13 +63,5 @@ namespace MiddleEarthAPI.Controllers
 
             return Ok(publisher);
         }
-    }
-
-    //TODO: Temporary and it will be replaced by its own file in the future
-    public interface IPublisherService
-    {
-        Task<object> GetPublisherById(int id);
-
-        Task<List<object>> GetPublishers();
     }
 }
