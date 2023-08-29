@@ -48,6 +48,8 @@ namespace MiddleEarthAPI
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddScoped<IAuthorService, AuthorService>();
             services.AddScoped<IAuthorRepository, AuthorRepository>();
+            services.AddScoped<IPublisherService, PublisherService>();
+            services.AddScoped<IPublisherRepository, PublisherRepository>();
             services.Configure<Settings>(Configuration.GetSection("Settings"));
         }
 

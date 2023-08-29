@@ -38,7 +38,7 @@ namespace MiddleEarthAPI.Data.Repositories
 
             var authors = await _middleEarthDataContext.Author.ToListAsync();
 
-            _logger.LogInformation($"{ComponentName} - Retrieved {authors.Count} books through GetAuthors");
+            _logger.LogInformation($"{ComponentName} - Retrieved {authors.Count} authors through GetAuthors");
 
             return authors;
         }

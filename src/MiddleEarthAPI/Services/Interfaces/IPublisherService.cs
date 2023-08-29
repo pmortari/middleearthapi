@@ -8,6 +8,6 @@ namespace MiddleEarthAPI.Services.Interfaces
     {
         Task<DetailedPublisher> GetPublisherById(int id);
 
-        Task<List<Publisher>> GetPublishers();
+        Task<ICollection<Publisher>> GetPublishers();
     }
 }
